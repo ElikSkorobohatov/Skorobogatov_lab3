@@ -1,0 +1,56 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* цвет и прозрачность */
+    visibility: hidden;
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .overlay.active{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .bord {
+    width: 300px;
+    position: fixed;
+    z-index: 1000; /* чтобы модальное окно было поверх затемнения */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .bord.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .but{
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+  }
+  
